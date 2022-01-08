@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         etTo = findViewById(R.id.editTextTo);
-        etSubject = findViewById(R.id.editTextSubject);
+      //  etSubject = findViewById(R.id.editTextSubject);
         etMessage = findViewById(R.id.editTextMessage);
         button = findViewById(R.id.button);
 
@@ -75,8 +75,10 @@ public class MainActivity extends AppCompatActivity {
 //                    message.setRecipients(Message.RecipientType.TO, etTo.setText("lalithsharma989@gmail.com"));
                     message.setRecipients(Message.RecipientType.TO,
                             InternetAddress.parse(etTo.getText().toString().trim()));
+
                     // Email subject
-                    message.setSubject(etSubject.getText().toString().trim());
+                   // message.setSubject(etSubject.getText().toString().trim());
+
                     // Email message
                     message.setText(etMessage.getText().toString().trim());
 
@@ -135,8 +137,10 @@ public class MainActivity extends AppCompatActivity {
                     public void onClick(DialogInterface dialog, int which) {
                         dialog.dismiss();
                         // Clear all edit text
-                        etTo.setText("");
-                        etSubject.setText("");
+                      //  etTo.setText("");
+
+                      //  etSubject.setText("");
+
                         etMessage.setText("");
                     }
                 });
